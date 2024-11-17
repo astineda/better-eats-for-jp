@@ -31,7 +31,7 @@
 
   // deal strings
   const deelsStrs = {
-    bogoOnly: "Buy 1, Get 1 Free",
+    bogoOnly: "1 つ頼むと 1 つ無料",
     spend10Get8: "Spend $10, Save $8",
     hasOffers: "Offers Available",
   };
@@ -215,7 +215,7 @@
             id="bogoFilter"
             type="checkbox"
           />
-            <label class="uk-form-label" for="toggle-switch">Buy 1, Get 1</label>
+            <label class="uk-form-label" for="toggle-switch">1つ頼むと1つ無料</label>
         </div>
         `);
         typesFilter.append(bogoFilter);
@@ -303,7 +303,7 @@
               <textarea id="excludeList" class="uk-textarea uk-height-medium"></textarea>
             </div>
             <div class="uk-form-help">
-              Hide restaurants you do not want to see, one per line, ie. 'bubble tea', 'mcdonald'
+              非表示にしたい店名を一行ずつ指定
             </div>
           </div>
         `);
@@ -368,7 +368,7 @@
           const parentThis = $(this);
           $("span[data-testid='rich-text']", $(this)).each(function () {
             const textContent = $(this)?.text?.();
-            if (textContent && textContent.includes("Buy 1, Get 1 Free")) {
+            if (textContent && textContent.includes("1 つ頼むと 1 つ無料")) {
               deals.push(parentThis.clone());
             }
           });
